@@ -4,11 +4,15 @@ import android.content.Context;
 
 /**
  * - @Description:
- * //todo 复用
  * - @Time:  2020/8/3 15:14
  */
 public class CpuUtil {
 
+    /**
+     * 获取所有so库在环境变量中的路径
+     * @param nativeLibPath
+     * @return
+     */
     public static String getNativeLibEnvDirs(String nativeLibPath) {
         if (isArm64(nativeLibPath)) {
             return "/system/lib64/:/vendor/lib64/:" + nativeLibPath;
